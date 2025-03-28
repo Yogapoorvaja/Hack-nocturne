@@ -1,0 +1,60 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  .hero h1 span {
+    color: var(--secondary);
+  }
+  
+  /* Main Container */
+  .main-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Panels */
+  .recording-panel, .results-panel {
+    flex: 1;
+    background: rgba(10, 10, 26, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(110, 0, 255, 0.3);
+  }
+  
+  /* Recording Visualizer */
+  .visualizer {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pulse-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(110, 0, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  

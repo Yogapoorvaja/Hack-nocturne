@@ -1,0 +1,48 @@
+:root {
+    --primary: #6e00ff;
+    --secondary: #00f0ff;
+    --dark: #0a0a1a;
+    --light: #f0f0ff;
+  }
+  /* Add to global.css */
+main {
+    position: relative;
+    z-index: 1;
+    padding-top: 70px; 
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+    margin:0;
+    overflow-x: hidden;
+  }
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .app {
+    min-height: 100vh;
+  }
+  
+  /* Futuristic glow effects */
+  .glow-text {
+    text-shadow: 0 0 10px var(--secondary), 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+  
+  .glow-box {
+    box-shadow: 0 0 15px rgba(110, 0, 255, 0.7);
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }

@@ -1,0 +1,187 @@
+.chatbot-container {
+    background: #1a052f;
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(106, 27, 154, 0.5);
+  }
+  
+  .chatbot-header {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .chatbot-body input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 1rem;
+  }
+  
+  .chatbot-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .record-btn, .file-upload, .send-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-upload {
+    background: #4a148c;
+    color: white;
+    position: relative;
+  }
+  /* Add to your existing CSS */
+.recording-indicator {
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  .analyzing-text::after {
+    content: ' .';
+    animation: dots 2s infinite steps(4);
+  }
+  
+  @keyframes dots {
+    0% { content: ' .'; }
+    33% { content: ' ..'; }
+    66% { content: ' ...'; }
+  }
+  /* Add to Chatbot.css */
+.record-btn.recording {
+    background: #ff0000;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+  }
+  .file-upload-btn {
+    padding: 8px 12px;
+    background: #4a148c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .file-upload-btn:hover {
+    background: #6a1b9a;
+  }
+  
+  /* Hide default file input */
+  input[type="file"] {
+    display: none;
+  }
+  /* Add this to your Chatbot.css - Only for the Analyze button */
+.analyze-btn {
+    padding: 10px 20px;
+    background: #6e00ff; /* Royal purple */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .analyze-btn:hover {
+    background: #5a00d1;
+    transform: translateY(-1px);
+  }
+  
+  .analyze-btn:disabled {
+    background: #b388ff;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .analyze-btn.analyzing {
+    background: #4a148c;
+  }
+  
+  .analyze-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  /* Add this to your Chatbot.css */
+.action-buttons {
+    display: flex;
+    gap: 16px; /* Increased from 12px */
+    margin-top: 20px;
+  }
+  
+  /* Optional: Ensure buttons don't wrap on small screens */
+  @media (max-width: 480px) {
+    .action-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  .analysis-report {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #6e00ff;
+  }
+  
+  .report-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  .report-label {
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .report-value {
+    font-weight: 600;
+  }
+  
+  .report-value.danger {
+    color: #d32f2f;
+  }
+  
+  .report-value.safe {
+    color: #388e3c;
+  }
+  
+  .biomarkers {
+    margin-top: 15px;
+  }
+  
+  .biomarker-name {
+    display: inline-block;
+    width: 120px;
+    color: #6c757d;
+  }
+  
+  .biomarker-value {
+    font-family: monospace;
+  }
